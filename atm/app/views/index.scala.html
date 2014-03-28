@@ -1,0 +1,20 @@
+@(customers: List[Customer], customerForm: Form[String])
+
+@import helper._
+
+@main("Withdraw or deposit?") {
+
+# <h1>@customers.size task(s)</h1>
+
+
+<h2>Withdraw or deposit?</h2>
+
+@form(routes.Application.withdraw) {
+
+@inputText(customerForm("amount"))
+
+<input type="submit" value="Withdraw">
+
+}
+
+}
